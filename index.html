@@ -32,6 +32,9 @@ nav {
 nav ul {
   list-style-type: none;
   padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 li {
@@ -107,9 +110,10 @@ footer {
   </article>
 
   <article>
-    <h1 id="postmortem">Post Mortem</h1>
-    <p> A few paragraphs describing how you would take the project further, what went well, and what you would change if given another month on the project</p>
+    <h1 id="postmortem">Post Mortem</h1> <p>We believe we did a good job on creating a separation of responsibilities within the game engine itself, such as having components for major object functions. However, in the future we could create a transform component for the gameobjects position and velocity. We had trouble doing this as the gameobjects transform attributes were used by so many other components.</p>
+    <p>Another improvement we could make is on general graphics and feedback. We used 2d bitmaps for our demo that could be customized in the GUI. A good improvement would be to use 3d graphics in a 2D plane, or add particle effects on collisions. For audio, we could add customizable audio for events in the game.</p>
     <p> If given another month on this project, our team had many plans that we wish we could have implemented but had to scale back due to unexpected obstacles. For example, we had started building out a 3D graphics engine with a custom renderer to create a 2.5D game. With more time, (and Hannah concussion-free) we believe that this could have been implemented. Additionally, we had plans for the 3D space background to be customizable via our GUI. Expanding the GUI capabilities overall would be another thing our team would love to expand on our project. Even given a few more days, we would have loved making the game more custoizable.</p>
+   
   </article>
 
 </section>
