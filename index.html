@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Space Engine</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #000065;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  background: #dce7ff;
+  padding: 25px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 100%;
+  background-color: #fefefe;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #000065;
+  padding: 10px;
+  text-align: center;
+  color: rgb(105, 105, 105);
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Space Engine</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#trailer">Trailer</a></li>
+      <li><a href="#documentation">Documentation</a></li>
+      <li><a href="#architecture">Architecture</a></li>
+      <li><a href="#binary">Binary</a></li>
+      <li><a href="#postmortem">Post Mortem</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1 id="trailer">Trailer</h1>
+    <p>Provide a 1 minute video trailer followed by at least 3 screenshots of your game (order matters, video first, then screenshots below)</p>
+  </article>
+
+  <article>
+    <h1 id="documentation">Documentation</h1>
+    <p>(i.e. a link to your doxygen generated files)</p>
+  </article>
+
+  <article>
+    <h1 id="architecture">Architecture</h1>
+    <p>An image of your engine architecture.</p>
+  </article>
+  
+  <article>
+    <h1 id="binary">Binary</h1>
+    <p>A link to your binary.</p>
+  </article>
+
+  <article>
+    <h1 id="postmortem">Post Mortem</h1>
+    <p> A few paragraphs describing how you would take the project further, what went well, and what you would change if given another month on the project</p>
+    <p> If given another month on this project, our team had many plans that we wish we could have implemented but had to scale back due to unexpected obstacles. For example, we had started building out a 3D graphics engine with a custom renderer to create a 2.5D game. With more time, (and Hannah concussion-free) we believe that this could have been implemented. Additionally, we had plans for the 3D space background to be customizable via our GUI. Expanding the GUI capabilities overall would be another thing our team would love to expand on our project. Even given a few more days, we would have loved making the game more custoizable.</p>
+  </article>
+
+</section>
+
+<footer>
+  <p>CS5850 Building Game Engines -- boston-portland-group -- Spring 2023</p>
+</footer>
+
+</body>
+</html>
+
