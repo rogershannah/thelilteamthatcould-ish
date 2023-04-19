@@ -1,0 +1,92 @@
+\hypertarget{class_component}{}\doxysection{Component Class Reference}
+\label{class_component}\index{Component@{Component}}
+
+
+{\ttfamily \#include $<$Component.\+hpp$>$}
+
+
+
+Inheritance diagram for Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_component__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_component_aa3ba7bbb8bfdc836ee3c6536b8d04d22}{Update}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \&g)=0
+\item 
+virtual void \mbox{\hyperlink{class_component_a78c8f31f3d9a8af5bc02275cb677cf4b}{Render}} (SDL\+\_\+\+Renderer $\ast$ren)=0
+\item 
+virtual bool \mbox{\hyperlink{class_component_a02aac3ddd23b7a94630bcc753866db96}{Get\+Render\+Flag}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_component_a0e9c274cd658e024ca01826b68252097}{Set\+Render\+Flag}} (bool b)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_component_addafed0919900a4b5c7fe7900a544390}{render\+Flag}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_component}{Component}} abstract class This is attached to gameobjects 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_component_a02aac3ddd23b7a94630bcc753866db96}\label{class_component_a02aac3ddd23b7a94630bcc753866db96}} 
+\index{Component@{Component}!GetRenderFlag@{GetRenderFlag}}
+\index{GetRenderFlag@{GetRenderFlag}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{GetRenderFlag()}{GetRenderFlag()}}
+{\footnotesize\ttfamily virtual bool Component\+::\+Get\+Render\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Returns if component is being rendered 
+
+Implemented in \mbox{\hyperlink{class_audio_source_a210ec1841fb83dc1df1d38f4bdb16515}{Audio\+Source}}, \mbox{\hyperlink{class_collision_component_ac94596b3974e87ec3ffe06f52df8863e}{Collision\+Component}}, \mbox{\hyperlink{class_input_controller_a3f352241defe60e234e4c75d0d59d7c1}{Input\+Controller}}, \mbox{\hyperlink{class_sprite_a3e7af9758cad848f0b854a018cbdd8e3}{Sprite}}, and \mbox{\hyperlink{class_text_ab54d8d92e39d7cb9aca95b8b9e5b7c9b}{Text}}.
+
+\mbox{\Hypertarget{class_component_a78c8f31f3d9a8af5bc02275cb677cf4b}\label{class_component_a78c8f31f3d9a8af5bc02275cb677cf4b}} 
+\index{Component@{Component}!Render@{Render}}
+\index{Render@{Render}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily virtual void Component\+::\+Render (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{ren }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Render function to run each loop 
+
+Implemented in \mbox{\hyperlink{class_audio_source_acd440d181424cf12e323e894c976eb88}{Audio\+Source}}, \mbox{\hyperlink{class_collision_component_abeea267c5e60e74cabe4907e951bb88c}{Collision\+Component}}, \mbox{\hyperlink{class_input_controller_aafe4af5ec84156489e06e590382ff4b2}{Input\+Controller}}, \mbox{\hyperlink{class_sprite_ac4e668473c3d1d0bbee50c032cd7505a}{Sprite}}, and \mbox{\hyperlink{class_text_ab68271fffe8ecaf93cbdd73a42a98fab}{Text}}.
+
+\mbox{\Hypertarget{class_component_a0e9c274cd658e024ca01826b68252097}\label{class_component_a0e9c274cd658e024ca01826b68252097}} 
+\index{Component@{Component}!SetRenderFlag@{SetRenderFlag}}
+\index{SetRenderFlag@{SetRenderFlag}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{SetRenderFlag()}{SetRenderFlag()}}
+{\footnotesize\ttfamily virtual void Component\+::\+Set\+Render\+Flag (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+To enable/disable rendering 
+
+Implemented in \mbox{\hyperlink{class_audio_source_a1aa3aadb526e0c69e672513a5f1e860d}{Audio\+Source}}, \mbox{\hyperlink{class_collision_component_aba81b0c73658449cb9167c9f55c119a6}{Collision\+Component}}, \mbox{\hyperlink{class_input_controller_a04c35fd8d6289541bcf42ff192fba0cf}{Input\+Controller}}, \mbox{\hyperlink{class_sprite_a9649ac123dc68d3f52b0a4d839955428}{Sprite}}, and \mbox{\hyperlink{class_text_ae303393264d815f64c62cc7066cbf37b}{Text}}.
+
+\mbox{\Hypertarget{class_component_aa3ba7bbb8bfdc836ee3c6536b8d04d22}\label{class_component_aa3ba7bbb8bfdc836ee3c6536b8d04d22}} 
+\index{Component@{Component}!Update@{Update}}
+\index{Update@{Update}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void Component\+::\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \&}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Update function to run each loop 
+
+Implemented in \mbox{\hyperlink{class_audio_source_a5fff387d96cc629189bf714ee4871719}{Audio\+Source}}, \mbox{\hyperlink{class_collision_component_a1c77d5b7637863af287e97ee6bfb5084}{Collision\+Component}}, \mbox{\hyperlink{class_input_controller_a901f6461aa7e769a3c2d7eb0b4afd695}{Input\+Controller}}, \mbox{\hyperlink{class_sprite_a275e83f0099fc068419caca88b8d5573}{Sprite}}, and \mbox{\hyperlink{class_text_a755454f50eff3534d9a677a1974ea045}{Text}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_component_addafed0919900a4b5c7fe7900a544390}\label{class_component_addafed0919900a4b5c7fe7900a544390}} 
+\index{Component@{Component}!renderFlag@{renderFlag}}
+\index{renderFlag@{renderFlag}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{renderFlag}{renderFlag}}
+{\footnotesize\ttfamily bool Component\+::render\+Flag = true\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_component_8hpp}{Component.\+hpp}}\end{DoxyCompactItemize}

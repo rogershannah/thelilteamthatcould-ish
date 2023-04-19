@@ -1,0 +1,429 @@
+\hypertarget{class_s_d_l_graphics_program}{}\doxysection{SDLGraphics\+Program Class Reference}
+\label{class_s_d_l_graphics_program}\index{SDLGraphicsProgram@{SDLGraphicsProgram}}
+
+
+{\ttfamily \#include $<$SDLGraphics\+Program.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_d_l_graphics_program_a976683178e086cd2a1a801fd9c501a7b}{SDLGraphics\+Program}} (int w, int h)
+\item 
+\mbox{\hyperlink{class_s_d_l_graphics_program_a2504412e7eaa011a1116447eb4d5ec00}{$\sim$\+SDLGraphics\+Program}} ()
+\item 
+bool \mbox{\hyperlink{class_s_d_l_graphics_program_a6cc65adc2dde4f2346839685c4e43ea9}{init\+GL}} ()
+\item 
+void \mbox{\hyperlink{class_s_d_l_graphics_program_a56942edfd4c5f45334ba55adb2558d35}{clear}} ()
+\item 
+void \mbox{\hyperlink{class_s_d_l_graphics_program_a1b2040042b2fc4bda09f365d7885e9a3}{flip}} ()
+\item 
+void \mbox{\hyperlink{class_s_d_l_graphics_program_a299c62853b3f28fc3930880fc4c128ba}{delay}} (int milliseconds)
+\item 
+void \mbox{\hyperlink{class_s_d_l_graphics_program_a956c5ddcc38f702491ca5ed5080d24f9}{loop}} (int milliseconds)
+\item 
+bool \mbox{\hyperlink{class_s_d_l_graphics_program_aae05b60cd3996b3ac447eaa77ecab2a2}{loop\+\_\+once}} (int milliseconds)
+\item 
+SDL\+\_\+\+Window $\ast$ \mbox{\hyperlink{class_s_d_l_graphics_program_a42e9554ec5b497551530bd5a8ca9585f}{get\+SDLWindow}} ()
+\item 
+bool \mbox{\hyperlink{class_s_d_l_graphics_program_a46f1ae2f177d9545d5485ed31760c88d}{Is\+Up\+Key\+Pressed}} ()
+\item 
+bool \mbox{\hyperlink{class_s_d_l_graphics_program_a89e47a67321023c3a555838173aa5f54}{Is\+Down\+Key\+Pressed}} ()
+\item 
+bool \mbox{\hyperlink{class_s_d_l_graphics_program_a7faf61abf987786c8591005efc396de9}{Is\+WKey\+Pressed}} ()
+\item 
+bool \mbox{\hyperlink{class_s_d_l_graphics_program_ac6dd95885193a4b3ffa002882ecfe8a7}{Is\+SKey\+Pressed}} ()
+\item 
+bool \mbox{\hyperlink{class_s_d_l_graphics_program_a13d3a508882d0f1f232d49350213d704}{Is\+Quit\+Key\+Pressed}} ()
+\item 
+void \mbox{\hyperlink{class_s_d_l_graphics_program_a3ddd43940f40f450071d00fee3c0523e}{Toggle\+Bounding\+Boxes}} ()
+\item 
+void \mbox{\hyperlink{class_s_d_l_graphics_program_a16d2650fd0229073b5de1922fa0156fb}{Draw\+Rectangle}} (int x, int y, int w, int h)
+\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$ \mbox{\hyperlink{class_s_d_l_graphics_program_a1e57f310b4dd850f79d36143c8e0d9bd}{Create\+Game\+Object}} (int x, int y, double angle, double speed)
+\item 
+\mbox{\hyperlink{class_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{class_s_d_l_graphics_program_a87f1e7c0f683593966f5ffe0ec0cee95}{Create\+Sprite}} ()
+\item 
+\mbox{\hyperlink{class_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{class_s_d_l_graphics_program_ad00bc5d6ab2b97cb341afbbcaaa54165}{Create\+Component\+Sprite}} (int frameX, int frameY, int frame\+Width, int frame\+Height, int dest\+Width, int dest\+Height, std\+::string image, int offsetX, int offsetY)
+\item 
+\mbox{\hyperlink{class_input_controller}{Input\+Controller}} $\ast$ \mbox{\hyperlink{class_s_d_l_graphics_program_aa81fa4e8752de0477d32fec19ea10a6b}{Create\+Component\+Input\+Controller}} (std\+::string left, std\+::string right, std\+::string up, std\+::string down, std\+::string action1, std\+::string action2)
+\item 
+void \mbox{\hyperlink{class_s_d_l_graphics_program_a2b4182c656b766bb67435740dbd9443b}{Render\+Game\+Object}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \&g)
+\item 
+\mbox{\hyperlink{class_audio_source}{Audio\+Source}} $\ast$ \mbox{\hyperlink{class_s_d_l_graphics_program_a42d7edc5c9d6016c710835cba22aed56}{Create\+Audio}} (std\+::string name, int channel, int volume, int priority)
+\item 
+\mbox{\hyperlink{class_collision_component}{Collision\+Component}} $\ast$ \mbox{\hyperlink{class_s_d_l_graphics_program_afd4855ec4c97f47b0ffb464b66aad720}{Create\+Collision\+Component}} (double scale)
+\item 
+\mbox{\hyperlink{class_text}{Text}} $\ast$ \mbox{\hyperlink{class_s_d_l_graphics_program_ac21fe6779904295a5f89422497c0aef7}{Create\+Text}} (int x, int y, int w, int h)
+\item 
+void \mbox{\hyperlink{class_s_d_l_graphics_program_abe7d31defd4a6c7a035594ff15e1b887}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_s_d_l_graphics_program_afb653f6f329cb7ddfbb5332a5ea1bbda}{Render}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_a976683178e086cd2a1a801fd9c501a7b}\label{class_s_d_l_graphics_program_a976683178e086cd2a1a801fd9c501a7b}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{SDLGraphicsProgram()}{SDLGraphicsProgram()}}
+{\footnotesize\ttfamily SDLGraphics\+Program\+::\+SDLGraphics\+Program (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_s_d_l_graphics_program_a976683178e086cd2a1a801fd9c501a7b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_a2504412e7eaa011a1116447eb4d5ec00}\label{class_s_d_l_graphics_program_a2504412e7eaa011a1116447eb4d5ec00}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!````~SDLGraphicsProgram@{$\sim$SDLGraphicsProgram}}
+\index{````~SDLGraphicsProgram@{$\sim$SDLGraphicsProgram}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{$\sim$SDLGraphicsProgram()}{~SDLGraphicsProgram()}}
+{\footnotesize\ttfamily SDLGraphics\+Program\+::$\sim$\+SDLGraphics\+Program (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_a56942edfd4c5f45334ba55adb2558d35}\label{class_s_d_l_graphics_program_a56942edfd4c5f45334ba55adb2558d35}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!clear@{clear}}
+\index{clear@{clear}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void SDLGraphics\+Program\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_d_l_graphics_program_a56942edfd4c5f45334ba55adb2558d35_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_a42d7edc5c9d6016c710835cba22aed56}\label{class_s_d_l_graphics_program_a42d7edc5c9d6016c710835cba22aed56}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!CreateAudio@{CreateAudio}}
+\index{CreateAudio@{CreateAudio}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{CreateAudio()}{CreateAudio()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_audio_source}{Audio\+Source}} $\ast$ SDLGraphics\+Program\+::\+Create\+Audio (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{int}]{channel,  }\item[{int}]{volume,  }\item[{int}]{priority }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_s_d_l_graphics_program_a42d7edc5c9d6016c710835cba22aed56_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_afd4855ec4c97f47b0ffb464b66aad720}\label{class_s_d_l_graphics_program_afd4855ec4c97f47b0ffb464b66aad720}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!CreateCollisionComponent@{CreateCollisionComponent}}
+\index{CreateCollisionComponent@{CreateCollisionComponent}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{CreateCollisionComponent()}{CreateCollisionComponent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_collision_component}{Collision\+Component}} $\ast$ SDLGraphics\+Program\+::\+Create\+Collision\+Component (\begin{DoxyParamCaption}\item[{double}]{scale }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_d_l_graphics_program_afd4855ec4c97f47b0ffb464b66aad720_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_aa81fa4e8752de0477d32fec19ea10a6b}\label{class_s_d_l_graphics_program_aa81fa4e8752de0477d32fec19ea10a6b}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!CreateComponentInputController@{CreateComponentInputController}}
+\index{CreateComponentInputController@{CreateComponentInputController}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{CreateComponentInputController()}{CreateComponentInputController()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_input_controller}{Input\+Controller}} $\ast$ SDLGraphics\+Program\+::\+Create\+Component\+Input\+Controller (\begin{DoxyParamCaption}\item[{std\+::string}]{left,  }\item[{std\+::string}]{right,  }\item[{std\+::string}]{up,  }\item[{std\+::string}]{down,  }\item[{std\+::string}]{action1,  }\item[{std\+::string}]{action2 }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_d_l_graphics_program_aa81fa4e8752de0477d32fec19ea10a6b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_ad00bc5d6ab2b97cb341afbbcaaa54165}\label{class_s_d_l_graphics_program_ad00bc5d6ab2b97cb341afbbcaaa54165}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!CreateComponentSprite@{CreateComponentSprite}}
+\index{CreateComponentSprite@{CreateComponentSprite}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{CreateComponentSprite()}{CreateComponentSprite()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sprite}{Sprite}} $\ast$ SDLGraphics\+Program\+::\+Create\+Component\+Sprite (\begin{DoxyParamCaption}\item[{int}]{frameX,  }\item[{int}]{frameY,  }\item[{int}]{frame\+Width,  }\item[{int}]{frame\+Height,  }\item[{int}]{dest\+Width,  }\item[{int}]{dest\+Height,  }\item[{std\+::string}]{image,  }\item[{int}]{offsetX,  }\item[{int}]{offsetY }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_d_l_graphics_program_ad00bc5d6ab2b97cb341afbbcaaa54165_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_a1e57f310b4dd850f79d36143c8e0d9bd}\label{class_s_d_l_graphics_program_a1e57f310b4dd850f79d36143c8e0d9bd}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!CreateGameObject@{CreateGameObject}}
+\index{CreateGameObject@{CreateGameObject}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{CreateGameObject()}{CreateGameObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$ SDLGraphics\+Program\+::\+Create\+Game\+Object (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{double}]{angle,  }\item[{double}]{speed }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_s_d_l_graphics_program_a1e57f310b4dd850f79d36143c8e0d9bd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_a87f1e7c0f683593966f5ffe0ec0cee95}\label{class_s_d_l_graphics_program_a87f1e7c0f683593966f5ffe0ec0cee95}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!CreateSprite@{CreateSprite}}
+\index{CreateSprite@{CreateSprite}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{CreateSprite()}{CreateSprite()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sprite}{Sprite}} $\ast$ SDLGraphics\+Program\+::\+Create\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_s_d_l_graphics_program_a87f1e7c0f683593966f5ffe0ec0cee95_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_ac21fe6779904295a5f89422497c0aef7}\label{class_s_d_l_graphics_program_ac21fe6779904295a5f89422497c0aef7}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!CreateText@{CreateText}}
+\index{CreateText@{CreateText}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{CreateText()}{CreateText()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_text}{Text}} $\ast$ SDLGraphics\+Program\+::\+Create\+Text (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_s_d_l_graphics_program_ac21fe6779904295a5f89422497c0aef7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_a299c62853b3f28fc3930880fc4c128ba}\label{class_s_d_l_graphics_program_a299c62853b3f28fc3930880fc4c128ba}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!delay@{delay}}
+\index{delay@{delay}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{delay()}{delay()}}
+{\footnotesize\ttfamily void SDLGraphics\+Program\+::delay (\begin{DoxyParamCaption}\item[{int}]{milliseconds }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_d_l_graphics_program_a299c62853b3f28fc3930880fc4c128ba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_a16d2650fd0229073b5de1922fa0156fb}\label{class_s_d_l_graphics_program_a16d2650fd0229073b5de1922fa0156fb}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!DrawRectangle@{DrawRectangle}}
+\index{DrawRectangle@{DrawRectangle}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{DrawRectangle()}{DrawRectangle()}}
+{\footnotesize\ttfamily void SDLGraphics\+Program\+::\+Draw\+Rectangle (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_s_d_l_graphics_program_a16d2650fd0229073b5de1922fa0156fb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_a1b2040042b2fc4bda09f365d7885e9a3}\label{class_s_d_l_graphics_program_a1b2040042b2fc4bda09f365d7885e9a3}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!flip@{flip}}
+\index{flip@{flip}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{flip()}{flip()}}
+{\footnotesize\ttfamily void SDLGraphics\+Program\+::flip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_d_l_graphics_program_a1b2040042b2fc4bda09f365d7885e9a3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_a42e9554ec5b497551530bd5a8ca9585f}\label{class_s_d_l_graphics_program_a42e9554ec5b497551530bd5a8ca9585f}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!getSDLWindow@{getSDLWindow}}
+\index{getSDLWindow@{getSDLWindow}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{getSDLWindow()}{getSDLWindow()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Window $\ast$ SDLGraphics\+Program\+::get\+SDLWindow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_d_l_graphics_program_a6cc65adc2dde4f2346839685c4e43ea9}\label{class_s_d_l_graphics_program_a6cc65adc2dde4f2346839685c4e43ea9}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!initGL@{initGL}}
+\index{initGL@{initGL}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{initGL()}{initGL()}}
+{\footnotesize\ttfamily bool SDLGraphics\+Program\+::init\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_d_l_graphics_program_a89e47a67321023c3a555838173aa5f54}\label{class_s_d_l_graphics_program_a89e47a67321023c3a555838173aa5f54}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!IsDownKeyPressed@{IsDownKeyPressed}}
+\index{IsDownKeyPressed@{IsDownKeyPressed}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{IsDownKeyPressed()}{IsDownKeyPressed()}}
+{\footnotesize\ttfamily bool SDLGraphics\+Program\+::\+Is\+Down\+Key\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_s_d_l_graphics_program_a89e47a67321023c3a555838173aa5f54_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_a13d3a508882d0f1f232d49350213d704}\label{class_s_d_l_graphics_program_a13d3a508882d0f1f232d49350213d704}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!IsQuitKeyPressed@{IsQuitKeyPressed}}
+\index{IsQuitKeyPressed@{IsQuitKeyPressed}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{IsQuitKeyPressed()}{IsQuitKeyPressed()}}
+{\footnotesize\ttfamily bool SDLGraphics\+Program\+::\+Is\+Quit\+Key\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_s_d_l_graphics_program_a13d3a508882d0f1f232d49350213d704_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_ac6dd95885193a4b3ffa002882ecfe8a7}\label{class_s_d_l_graphics_program_ac6dd95885193a4b3ffa002882ecfe8a7}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!IsSKeyPressed@{IsSKeyPressed}}
+\index{IsSKeyPressed@{IsSKeyPressed}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{IsSKeyPressed()}{IsSKeyPressed()}}
+{\footnotesize\ttfamily bool SDLGraphics\+Program\+::\+Is\+SKey\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_s_d_l_graphics_program_ac6dd95885193a4b3ffa002882ecfe8a7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_a46f1ae2f177d9545d5485ed31760c88d}\label{class_s_d_l_graphics_program_a46f1ae2f177d9545d5485ed31760c88d}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!IsUpKeyPressed@{IsUpKeyPressed}}
+\index{IsUpKeyPressed@{IsUpKeyPressed}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{IsUpKeyPressed()}{IsUpKeyPressed()}}
+{\footnotesize\ttfamily bool SDLGraphics\+Program\+::\+Is\+Up\+Key\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_s_d_l_graphics_program_a46f1ae2f177d9545d5485ed31760c88d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_a7faf61abf987786c8591005efc396de9}\label{class_s_d_l_graphics_program_a7faf61abf987786c8591005efc396de9}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!IsWKeyPressed@{IsWKeyPressed}}
+\index{IsWKeyPressed@{IsWKeyPressed}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{IsWKeyPressed()}{IsWKeyPressed()}}
+{\footnotesize\ttfamily bool SDLGraphics\+Program\+::\+Is\+WKey\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_s_d_l_graphics_program_a7faf61abf987786c8591005efc396de9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_a956c5ddcc38f702491ca5ed5080d24f9}\label{class_s_d_l_graphics_program_a956c5ddcc38f702491ca5ed5080d24f9}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!loop@{loop}}
+\index{loop@{loop}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void SDLGraphics\+Program\+::loop (\begin{DoxyParamCaption}\item[{int}]{milliseconds }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_d_l_graphics_program_a956c5ddcc38f702491ca5ed5080d24f9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_s_d_l_graphics_program_a956c5ddcc38f702491ca5ed5080d24f9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_aae05b60cd3996b3ac447eaa77ecab2a2}\label{class_s_d_l_graphics_program_aae05b60cd3996b3ac447eaa77ecab2a2}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!loop\_once@{loop\_once}}
+\index{loop\_once@{loop\_once}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{loop\_once()}{loop\_once()}}
+{\footnotesize\ttfamily bool SDLGraphics\+Program\+::loop\+\_\+once (\begin{DoxyParamCaption}\item[{int}]{milliseconds }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_d_l_graphics_program_aae05b60cd3996b3ac447eaa77ecab2a2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_s_d_l_graphics_program_aae05b60cd3996b3ac447eaa77ecab2a2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_afb653f6f329cb7ddfbb5332a5ea1bbda}\label{class_s_d_l_graphics_program_afb653f6f329cb7ddfbb5332a5ea1bbda}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!Render@{Render}}
+\index{Render@{Render}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void SDLGraphics\+Program\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Per frame render Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_d_l_graphics_program_afb653f6f329cb7ddfbb5332a5ea1bbda_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_a2b4182c656b766bb67435740dbd9443b}\label{class_s_d_l_graphics_program_a2b4182c656b766bb67435740dbd9443b}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!RenderGameObject@{RenderGameObject}}
+\index{RenderGameObject@{RenderGameObject}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{RenderGameObject()}{RenderGameObject()}}
+{\footnotesize\ttfamily void SDLGraphics\+Program\+::\+Render\+Game\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \&}]{g }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{class_s_d_l_graphics_program_a2b4182c656b766bb67435740dbd9443b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_s_d_l_graphics_program_a2b4182c656b766bb67435740dbd9443b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_d_l_graphics_program_a3ddd43940f40f450071d00fee3c0523e}\label{class_s_d_l_graphics_program_a3ddd43940f40f450071d00fee3c0523e}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!ToggleBoundingBoxes@{ToggleBoundingBoxes}}
+\index{ToggleBoundingBoxes@{ToggleBoundingBoxes}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{ToggleBoundingBoxes()}{ToggleBoundingBoxes()}}
+{\footnotesize\ttfamily void SDLGraphics\+Program\+::\+Toggle\+Bounding\+Boxes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_d_l_graphics_program_abe7d31defd4a6c7a035594ff15e1b887}\label{class_s_d_l_graphics_program_abe7d31defd4a6c7a035594ff15e1b887}} 
+\index{SDLGraphicsProgram@{SDLGraphicsProgram}!Update@{Update}}
+\index{Update@{Update}!SDLGraphicsProgram@{SDLGraphicsProgram}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void SDLGraphics\+Program\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Per frame update \mbox{\hyperlink{class_collision_component}{Collision\+Component}} $\ast$\+Create\+Collision\+Component(); \mbox{\hyperlink{class_collision_component}{Collision\+Component}} $\ast$\+Create\+Collision\+Component(); Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_d_l_graphics_program_abe7d31defd4a6c7a035594ff15e1b887_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_s_d_l_graphics_program_8hpp}{SDLGraphics\+Program.\+hpp}}\item 
+\mbox{\hyperlink{_s_d_l_graphics_program_8cpp}{SDLGraphics\+Program.\+cpp}}\end{DoxyCompactItemize}

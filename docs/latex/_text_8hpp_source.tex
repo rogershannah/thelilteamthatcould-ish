@@ -1,0 +1,47 @@
+\hypertarget{_text_8hpp_source}{}\doxysection{Text.\+hpp}
+\mbox{\hyperlink{_text_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TEXT\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TEXT\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#if\ defined(LINUX)\ ||\ defined(MINGW)}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <SDL2/SDL\_ttf.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#else\ }\textcolor{comment}{//\ This\ works\ for\ Mac}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <SDL\_ttf.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_game_object_8hpp}{GameObject.hpp}}>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_text}{Text}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_component}{Component}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_text}{Text}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ h);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_text_a2d49e5c280e205125b149f7777ae30c7}{\string~Text}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ Update\ the\ Sprite}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_text_a755454f50eff3534d9a677a1974ea045}{Update}}(\mbox{\hyperlink{class_game_object}{GameObject}}\ \&g)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ Draw\ the\ Sprite}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_text_ab68271fffe8ecaf93cbdd73a42a98fab}{Render}}(SDL\_Renderer\ *ren)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ renderFlag\ methods}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_text_ab54d8d92e39d7cb9aca95b8b9e5b7c9b}{GetRenderFlag}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_text_ae303393264d815f64c62cc7066cbf37b}{SetRenderFlag}}(\textcolor{keywordtype}{bool}\ b)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ 'equivalent'\ to\ our\ destructor}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_text_a98f02ff0da0008db6ca2e281d6ca9acf}{Destroy}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_text_acc5748609139df43166190942313c5f0}{SetText}}(std::string\ s);}
+\DoxyCodeLine{00037\ \ \ \ \ std::string\ \mbox{\hyperlink{class_text_a46ebbe371a84ae41f910ba6492ed8b31}{GetText}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00040\ \ \ \ \ std::string\ text\ =\ \textcolor{stringliteral}{"{}test"{}};}
+\DoxyCodeLine{00041\ \ \ \ \ SDL\_Surface\ *surface\{\};}
+\DoxyCodeLine{00042\ \ \ \ \ SDL\_Texture\ *texture\{\};}
+\DoxyCodeLine{00043\ \ \ \ \ TTF\_Font\ *font;}
+\DoxyCodeLine{00044\ \ \ \ \ SDL\_Rect\ rect\{\};}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

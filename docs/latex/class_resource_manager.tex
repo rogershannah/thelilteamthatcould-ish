@@ -1,0 +1,93 @@
+\hypertarget{class_resource_manager}{}\doxysection{Resource\+Manager Class Reference}
+\label{class_resource_manager}\index{ResourceManager@{ResourceManager}}
+
+
+{\ttfamily \#include $<$Resource\+Manager.\+hpp$>$}
+
+
+
+Collaboration diagram for Resource\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{class_resource_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+SDL\+\_\+\+Surface $\ast$ \mbox{\hyperlink{class_resource_manager_a71c603bdc173cfe704788a0fbfe2ac7e}{Get\+Resource}} (std\+::string key)
+\item 
+Mix\+\_\+\+Chunk $\ast$ \mbox{\hyperlink{class_resource_manager_ac6061ae28a1179bc5c353bcc1e605ee2}{Get\+Sound}} (std\+::string key)
+\item 
+int \mbox{\hyperlink{class_resource_manager_a19f196ba87bf74201b9e3f496edc78cd}{Start\+Up}} ()
+\item 
+int \mbox{\hyperlink{class_resource_manager_ae5ed3ee26a3de63a04d4bb6542d5bbb0}{Shut\+Down}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} \& \mbox{\hyperlink{class_resource_manager_acb3f8ecc7b3de8c1c7ac956ce5114d47}{Get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} $\ast$ \mbox{\hyperlink{class_resource_manager_a14c7fe2981bb9334786160a9e8061c64}{instance\+\_\+}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_resource_manager_acb3f8ecc7b3de8c1c7ac956ce5114d47}\label{class_resource_manager_acb3f8ecc7b3de8c1c7ac956ce5114d47}} 
+\index{ResourceManager@{ResourceManager}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} \& Resource\+Manager\+::\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_resource_manager_acb3f8ecc7b3de8c1c7ac956ce5114d47_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_resource_manager_a71c603bdc173cfe704788a0fbfe2ac7e}\label{class_resource_manager_a71c603bdc173cfe704788a0fbfe2ac7e}} 
+\index{ResourceManager@{ResourceManager}!GetResource@{GetResource}}
+\index{GetResource@{GetResource}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{GetResource()}{GetResource()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Surface $\ast$ Resource\+Manager\+::\+Get\+Resource (\begin{DoxyParamCaption}\item[{std\+::string}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_resource_manager_ac6061ae28a1179bc5c353bcc1e605ee2}\label{class_resource_manager_ac6061ae28a1179bc5c353bcc1e605ee2}} 
+\index{ResourceManager@{ResourceManager}!GetSound@{GetSound}}
+\index{GetSound@{GetSound}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{GetSound()}{GetSound()}}
+{\footnotesize\ttfamily Mix\+\_\+\+Chunk $\ast$ Resource\+Manager\+::\+Get\+Sound (\begin{DoxyParamCaption}\item[{std\+::string}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_resource_manager_ae5ed3ee26a3de63a04d4bb6542d5bbb0}\label{class_resource_manager_ae5ed3ee26a3de63a04d4bb6542d5bbb0}} 
+\index{ResourceManager@{ResourceManager}!ShutDown@{ShutDown}}
+\index{ShutDown@{ShutDown}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{ShutDown()}{ShutDown()}}
+{\footnotesize\ttfamily int Resource\+Manager\+::\+Shut\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_resource_manager_a19f196ba87bf74201b9e3f496edc78cd}\label{class_resource_manager_a19f196ba87bf74201b9e3f496edc78cd}} 
+\index{ResourceManager@{ResourceManager}!StartUp@{StartUp}}
+\index{StartUp@{StartUp}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{StartUp()}{StartUp()}}
+{\footnotesize\ttfamily int Resource\+Manager\+::\+Start\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_resource_manager_a14c7fe2981bb9334786160a9e8061c64}\label{class_resource_manager_a14c7fe2981bb9334786160a9e8061c64}} 
+\index{ResourceManager@{ResourceManager}!instance\_@{instance\_}}
+\index{instance\_@{instance\_}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{instance\_}{instance\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} $\ast$ Resource\+Manager\+::instance\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_resource_manager_8hpp}{Resource\+Manager.\+hpp}}\item 
+\mbox{\hyperlink{_resource_manager_8cpp}{Resource\+Manager.\+cpp}}\end{DoxyCompactItemize}

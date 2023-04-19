@@ -1,0 +1,180 @@
+\hypertarget{class_text}{}\doxysection{Text Class Reference}
+\label{class_text}\index{Text@{Text}}
+
+
+{\ttfamily \#include $<$Text.\+hpp$>$}
+
+
+
+Inheritance diagram for Text\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{class_text__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Text\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{class_text__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_text_abf32c1af5fbed8a9c4a9253b5e3c2859}{Text}} (int x, int y, int w, int h)
+\item 
+\mbox{\hyperlink{class_text_a2d49e5c280e205125b149f7777ae30c7}{$\sim$\+Text}} ()
+\item 
+void \mbox{\hyperlink{class_text_a755454f50eff3534d9a677a1974ea045}{Update}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \&g) override
+\item 
+void \mbox{\hyperlink{class_text_ab68271fffe8ecaf93cbdd73a42a98fab}{Render}} (SDL\+\_\+\+Renderer $\ast$ren) override
+\item 
+bool \mbox{\hyperlink{class_text_ab54d8d92e39d7cb9aca95b8b9e5b7c9b}{Get\+Render\+Flag}} () override
+\item 
+void \mbox{\hyperlink{class_text_ae303393264d815f64c62cc7066cbf37b}{Set\+Render\+Flag}} (bool b) override
+\item 
+int \mbox{\hyperlink{class_text_a98f02ff0da0008db6ca2e281d6ca9acf}{Destroy}} ()
+\item 
+void \mbox{\hyperlink{class_text_acc5748609139df43166190942313c5f0}{Set\+Text}} (std\+::string s)
+\item 
+std\+::string \mbox{\hyperlink{class_text_a46ebbe371a84ae41f910ba6492ed8b31}{Get\+Text}} ()
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_component_aa3ba7bbb8bfdc836ee3c6536b8d04d22}{Update}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \&g)=0
+\item 
+virtual void \mbox{\hyperlink{class_component_a78c8f31f3d9a8af5bc02275cb677cf4b}{Render}} (SDL\+\_\+\+Renderer $\ast$ren)=0
+\item 
+virtual bool \mbox{\hyperlink{class_component_a02aac3ddd23b7a94630bcc753866db96}{Get\+Render\+Flag}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_component_a0e9c274cd658e024ca01826b68252097}{Set\+Render\+Flag}} (bool b)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_component}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_component_addafed0919900a4b5c7fe7900a544390}{render\+Flag}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_text}{Text}} component that extends the abstract component class This is used to attach text to a gameobject 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_text_abf32c1af5fbed8a9c4a9253b5e3c2859}\label{class_text_abf32c1af5fbed8a9c4a9253b5e3c2859}} 
+\index{Text@{Text}!Text@{Text}}
+\index{Text@{Text}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{Text()}{Text()}}
+{\footnotesize\ttfamily Text\+::\+Text (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_text_a2d49e5c280e205125b149f7777ae30c7}\label{class_text_a2d49e5c280e205125b149f7777ae30c7}} 
+\index{Text@{Text}!````~Text@{$\sim$Text}}
+\index{````~Text@{$\sim$Text}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{$\sim$Text()}{~Text()}}
+{\footnotesize\ttfamily Text\+::$\sim$\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_text_a98f02ff0da0008db6ca2e281d6ca9acf}\label{class_text_a98f02ff0da0008db6ca2e281d6ca9acf}} 
+\index{Text@{Text}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily int Text\+::\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_text_ab54d8d92e39d7cb9aca95b8b9e5b7c9b}\label{class_text_ab54d8d92e39d7cb9aca95b8b9e5b7c9b}} 
+\index{Text@{Text}!GetRenderFlag@{GetRenderFlag}}
+\index{GetRenderFlag@{GetRenderFlag}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{GetRenderFlag()}{GetRenderFlag()}}
+{\footnotesize\ttfamily bool Text\+::\+Get\+Render\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns if component is being rendered 
+
+Implements \mbox{\hyperlink{class_component_a02aac3ddd23b7a94630bcc753866db96}{Component}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_text_ab54d8d92e39d7cb9aca95b8b9e5b7c9b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_text_a46ebbe371a84ae41f910ba6492ed8b31}\label{class_text_a46ebbe371a84ae41f910ba6492ed8b31}} 
+\index{Text@{Text}!GetText@{GetText}}
+\index{GetText@{GetText}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{GetText()}{GetText()}}
+{\footnotesize\ttfamily std\+::string Text\+::\+Get\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{class_text_a46ebbe371a84ae41f910ba6492ed8b31_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_text_ab68271fffe8ecaf93cbdd73a42a98fab}\label{class_text_ab68271fffe8ecaf93cbdd73a42a98fab}} 
+\index{Text@{Text}!Render@{Render}}
+\index{Render@{Render}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Text\+::\+Render (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{ren }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Render function to run each loop 
+
+Implements \mbox{\hyperlink{class_component_a78c8f31f3d9a8af5bc02275cb677cf4b}{Component}}.
+
+\mbox{\Hypertarget{class_text_ae303393264d815f64c62cc7066cbf37b}\label{class_text_ae303393264d815f64c62cc7066cbf37b}} 
+\index{Text@{Text}!SetRenderFlag@{SetRenderFlag}}
+\index{SetRenderFlag@{SetRenderFlag}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{SetRenderFlag()}{SetRenderFlag()}}
+{\footnotesize\ttfamily void Text\+::\+Set\+Render\+Flag (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+To enable/disable rendering 
+
+Implements \mbox{\hyperlink{class_component_a0e9c274cd658e024ca01826b68252097}{Component}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{class_text_ae303393264d815f64c62cc7066cbf37b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_text_acc5748609139df43166190942313c5f0}\label{class_text_acc5748609139df43166190942313c5f0}} 
+\index{Text@{Text}!SetText@{SetText}}
+\index{SetText@{SetText}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{SetText()}{SetText()}}
+{\footnotesize\ttfamily void Text\+::\+Set\+Text (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{class_text_acc5748609139df43166190942313c5f0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_text_a755454f50eff3534d9a677a1974ea045}\label{class_text_a755454f50eff3534d9a677a1974ea045}} 
+\index{Text@{Text}!Update@{Update}}
+\index{Update@{Update}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Text\+::\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \&}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update function to run each loop 
+
+Implements \mbox{\hyperlink{class_component_aa3ba7bbb8bfdc836ee3c6536b8d04d22}{Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_text_8hpp}{Text.\+hpp}}\item 
+\mbox{\hyperlink{_text_8cpp}{Text.\+cpp}}\end{DoxyCompactItemize}

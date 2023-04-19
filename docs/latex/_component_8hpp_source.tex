@@ -1,0 +1,36 @@
+\hypertarget{_component_8hpp_source}{}\doxysection{Component.\+hpp}
+\mbox{\hyperlink{_component_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ COMPONENT\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ COMPONENT\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Forward\ declarations}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_object}{GameObject}};}
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }SDL\_Renderer;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_game_object_8hpp}{GameObject.hpp}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_component}{Component}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ Component();}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ Classes\ with\ virtual\ functions\ need\ public+virtual\ destructors\ or\ protected+non-\/virtual,\ so}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ \ \ that\ derived\ classes\ can\ call\ it.}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md\#c35-\/a-\/base-\/class-\/destructor-\/should-\/be-\/either-\/public-\/and-\/virtual-\/or-\/protected-\/and-\/non-\/virtual}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ TODO:\ learn\ more\ about\ why?\ This\ seems\ sloppy\ to\ require}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ virtual\ \string~Component();}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_aa3ba7bbb8bfdc836ee3c6536b8d04d22}{Update}}(\mbox{\hyperlink{class_game_object}{GameObject}}\ \&g)\ =\ 0;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_a78c8f31f3d9a8af5bc02275cb677cf4b}{Render}}(SDL\_Renderer\ *ren)\ =\ 0;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_component_a02aac3ddd23b7a94630bcc753866db96}{GetRenderFlag}}()\ =\ 0;}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_a0e9c274cd658e024ca01826b68252097}{SetRenderFlag}}(\textcolor{keywordtype}{bool}\ b)\ =\ 0;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_component_addafed0919900a4b5c7fe7900a544390}{renderFlag}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

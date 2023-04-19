@@ -1,0 +1,191 @@
+\hypertarget{class_collision_component}{}\doxysection{Collision\+Component Class Reference}
+\label{class_collision_component}\index{CollisionComponent@{CollisionComponent}}
+
+
+{\ttfamily \#include $<$Collision\+Component.\+hpp$>$}
+
+
+
+Inheritance diagram for Collision\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{class_collision_component__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Collision\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{class_collision_component__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_collision_component_1_1_a_a_b_b}{AABB}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_collision_component_ae03f9552ec1b80d05612b543f3154a3c}{Collision\+Component}} (double scale)
+\item 
+\mbox{\hyperlink{class_collision_component_a8927f6bcecb9862b870426af970ab3b7}{$\sim$\+Collision\+Component}} ()
+\item 
+void \mbox{\hyperlink{class_collision_component_a1c77d5b7637863af287e97ee6bfb5084}{Update}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \&g) override
+\item 
+void \mbox{\hyperlink{class_collision_component_abeea267c5e60e74cabe4907e951bb88c}{Render}} (SDL\+\_\+\+Renderer $\ast$ren) override
+\item 
+bool \mbox{\hyperlink{class_collision_component_ac94596b3974e87ec3ffe06f52df8863e}{Get\+Render\+Flag}} () override
+\item 
+void \mbox{\hyperlink{class_collision_component_aba81b0c73658449cb9167c9f55c119a6}{Set\+Render\+Flag}} (bool b) override
+\item 
+double \mbox{\hyperlink{class_collision_component_a4b12009714b43056a322f972ab998725}{Get\+Scale}} ()
+\item 
+void \mbox{\hyperlink{class_collision_component_a147d3a08d69822d3df199f91c6c41ff7}{Set\+Scale}} (double s)
+\item 
+bool \mbox{\hyperlink{class_collision_component_a539677ccf62b6efd8a551ceeca4a7c12}{Check\+Collision}} (\mbox{\hyperlink{class_collision_component}{Collision\+Component}} $\ast$other)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_component_aa3ba7bbb8bfdc836ee3c6536b8d04d22}{Update}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \&g)=0
+\item 
+virtual void \mbox{\hyperlink{class_component_a78c8f31f3d9a8af5bc02275cb677cf4b}{Render}} (SDL\+\_\+\+Renderer $\ast$ren)=0
+\item 
+virtual bool \mbox{\hyperlink{class_component_a02aac3ddd23b7a94630bcc753866db96}{Get\+Render\+Flag}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_component_a0e9c274cd658e024ca01826b68252097}{Set\+Render\+Flag}} (bool b)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_collision_component_1_1_a_a_b_b}{AABB}} \mbox{\hyperlink{class_collision_component_a4747ea1d5b9f1663cff088a64b37539d}{aabb}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_component}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_component_addafed0919900a4b5c7fe7900a544390}{render\+Flag}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Collision component that extends the abstract component class This is used to calculate collisions for a gameobject 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_collision_component_ae03f9552ec1b80d05612b543f3154a3c}\label{class_collision_component_ae03f9552ec1b80d05612b543f3154a3c}} 
+\index{CollisionComponent@{CollisionComponent}!CollisionComponent@{CollisionComponent}}
+\index{CollisionComponent@{CollisionComponent}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{CollisionComponent()}{CollisionComponent()}}
+{\footnotesize\ttfamily Collision\+Component\+::\+Collision\+Component (\begin{DoxyParamCaption}\item[{double}]{scale }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_collision_component_a8927f6bcecb9862b870426af970ab3b7}\label{class_collision_component_a8927f6bcecb9862b870426af970ab3b7}} 
+\index{CollisionComponent@{CollisionComponent}!````~CollisionComponent@{$\sim$CollisionComponent}}
+\index{````~CollisionComponent@{$\sim$CollisionComponent}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{$\sim$CollisionComponent()}{~CollisionComponent()}}
+{\footnotesize\ttfamily Collision\+Component\+::$\sim$\+Collision\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_collision_component_a539677ccf62b6efd8a551ceeca4a7c12}\label{class_collision_component_a539677ccf62b6efd8a551ceeca4a7c12}} 
+\index{CollisionComponent@{CollisionComponent}!CheckCollision@{CheckCollision}}
+\index{CheckCollision@{CheckCollision}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{CheckCollision()}{CheckCollision()}}
+{\footnotesize\ttfamily bool Collision\+Component\+::\+Check\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collision_component}{Collision\+Component}} $\ast$}]{other }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_collision_component_a539677ccf62b6efd8a551ceeca4a7c12_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_collision_component_ac94596b3974e87ec3ffe06f52df8863e}\label{class_collision_component_ac94596b3974e87ec3ffe06f52df8863e}} 
+\index{CollisionComponent@{CollisionComponent}!GetRenderFlag@{GetRenderFlag}}
+\index{GetRenderFlag@{GetRenderFlag}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{GetRenderFlag()}{GetRenderFlag()}}
+{\footnotesize\ttfamily bool Collision\+Component\+::\+Get\+Render\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns if component is being rendered 
+
+Implements \mbox{\hyperlink{class_component_a02aac3ddd23b7a94630bcc753866db96}{Component}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{class_collision_component_ac94596b3974e87ec3ffe06f52df8863e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_collision_component_a4b12009714b43056a322f972ab998725}\label{class_collision_component_a4b12009714b43056a322f972ab998725}} 
+\index{CollisionComponent@{CollisionComponent}!GetScale@{GetScale}}
+\index{GetScale@{GetScale}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{GetScale()}{GetScale()}}
+{\footnotesize\ttfamily double Collision\+Component\+::\+Get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_collision_component_abeea267c5e60e74cabe4907e951bb88c}\label{class_collision_component_abeea267c5e60e74cabe4907e951bb88c}} 
+\index{CollisionComponent@{CollisionComponent}!Render@{Render}}
+\index{Render@{Render}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Collision\+Component\+::\+Render (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{ren }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Render function to run each loop 
+
+Implements \mbox{\hyperlink{class_component_a78c8f31f3d9a8af5bc02275cb677cf4b}{Component}}.
+
+\mbox{\Hypertarget{class_collision_component_aba81b0c73658449cb9167c9f55c119a6}\label{class_collision_component_aba81b0c73658449cb9167c9f55c119a6}} 
+\index{CollisionComponent@{CollisionComponent}!SetRenderFlag@{SetRenderFlag}}
+\index{SetRenderFlag@{SetRenderFlag}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{SetRenderFlag()}{SetRenderFlag()}}
+{\footnotesize\ttfamily void Collision\+Component\+::\+Set\+Render\+Flag (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+To enable/disable rendering 
+
+Implements \mbox{\hyperlink{class_component_a0e9c274cd658e024ca01826b68252097}{Component}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{class_collision_component_aba81b0c73658449cb9167c9f55c119a6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_collision_component_a147d3a08d69822d3df199f91c6c41ff7}\label{class_collision_component_a147d3a08d69822d3df199f91c6c41ff7}} 
+\index{CollisionComponent@{CollisionComponent}!SetScale@{SetScale}}
+\index{SetScale@{SetScale}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{SetScale()}{SetScale()}}
+{\footnotesize\ttfamily void Collision\+Component\+::\+Set\+Scale (\begin{DoxyParamCaption}\item[{double}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_collision_component_a1c77d5b7637863af287e97ee6bfb5084}\label{class_collision_component_a1c77d5b7637863af287e97ee6bfb5084}} 
+\index{CollisionComponent@{CollisionComponent}!Update@{Update}}
+\index{Update@{Update}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Collision\+Component\+::\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \&}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update function to run each loop 
+
+Implements \mbox{\hyperlink{class_component_aa3ba7bbb8bfdc836ee3c6536b8d04d22}{Component}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_collision_component_a4747ea1d5b9f1663cff088a64b37539d}\label{class_collision_component_a4747ea1d5b9f1663cff088a64b37539d}} 
+\index{CollisionComponent@{CollisionComponent}!aabb@{aabb}}
+\index{aabb@{aabb}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{aabb}{aabb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_collision_component_1_1_a_a_b_b}{AABB}} Collision\+Component\+::aabb}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_collision_component_8hpp}{Collision\+Component.\+hpp}}\item 
+\mbox{\hyperlink{_collision_component_8cpp}{Collision\+Component.\+cpp}}\end{DoxyCompactItemize}

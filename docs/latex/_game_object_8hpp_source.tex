@@ -1,0 +1,65 @@
+\hypertarget{_game_object_8hpp_source}{}\doxysection{Game\+Object.\+hpp}
+\mbox{\hyperlink{_game_object_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GAMEOBJECT\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GAMEOBJECT\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_component}{Component}};}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_8hpp}{Component.hpp}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_collision_component_8hpp}{CollisionComponent.hpp}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_sprite_8hpp}{Sprite.hpp}}>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#if\ defined(LINUX)\ ||\ defined(MINGW)}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#else\ }\textcolor{comment}{//\ This\ works\ for\ Mac}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_object}{GameObject}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}{GameObject}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ Constructor\ with\ parameters\ for\ position,\ angle,\ and\ speed}}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}{GameObject}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_object_ad35c8c981954a69143edb0fa25ec4693}{x}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_object_a23e00e3eff70fc63a5230aad2c19c740}{y}},\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_object_ac7ea0b9874b8ee9f1dbfbb5d95393338}{angle}},\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_object_a9d46954587b6cb73615361b674b27b23}{speed}});}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_game_object_ab82dfdb656f9051c0587e6593b2dda97}{\string~GameObject}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_object_ac5f70c17e59ec5c1557239dcef0f92b5}{TestGO}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_a1bd14aa169f501f94f1721943d716535}{Update}}();}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_a4018df48b4df0fc4b1db520fcad1ba6c}{Render}}(SDL\_Renderer\ *ren);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_a4b6f23e11b7be236e7c02ce4b4228399}{AddComponent}}(std::string\ s,\ \mbox{\hyperlink{class_component}{Component}}\ *c);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_af34c63a3c9cd546c409e0e971acbfaec}{RemoveComponent}}(std::string\ s);}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_component}{Component}}\ *\mbox{\hyperlink{class_game_object_ab69360fd3fbb72c6e8b09b595e25e05e}{GetComponent}}(std::string\ s);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_object_a219e96545824e9e145dd87ae29765855}{CheckCollision}}(\mbox{\hyperlink{class_game_object}{GameObject}}\ *g);}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_a5484bb11063ee025ea3af444cd7d659a}{UpdatePosition}}();}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_a710022cc63ab69c97f97ed92bfe90bbb}{SetXPosition}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_object_ad35c8c981954a69143edb0fa25ec4693}{x}});}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_acf021891fea3d2ee13f0568409fc0064}{SetYPosition}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_object_a23e00e3eff70fc63a5230aad2c19c740}{y}});}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_a1b63bdf61b8a7f64d2c40461a9e726cf}{SetWidth}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_object_a886112c395ce593768f0bcaca318dfa6}{w}});}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_a8a312271f323fca0c906a0303b74fb76}{SetHeight}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_object_ac4e6e4da528bb5694d012528ea0df51e}{h}});}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_a349a4ba157b51f1b62a3572fcd3d68c4}{SetAngle}}(\textcolor{keywordtype}{double}\ theta);}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_a6ec3010e3e5f1b70654bb548c6163f76}{SetSpeed}}(\textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_object_a9d46954587b6cb73615361b674b27b23}{speed}});}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_af0001b9bac133d8014766481545c035b}{SetRenderFlag}}(\textcolor{keywordtype}{bool}\ b);}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_adf471e0c6053b466aa54d73d33d635c7}{DisplayBoundingBox}}(\textcolor{keywordtype}{bool}\ b);}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_object_a46abb7f14a4b4f3ec23582772607664d}{GetXPosition}}();}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_object_a2937ad6419e22150dfe06d27cbec710e}{GetYPosition}}();}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_object_a92eac126a91cf9301201d1426eceda0f}{GetWidth}}();}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_object_a2a030d1b4a0f446382584b84d9198c69}{GetHeight}}();}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_object_aea42b4d554ef8e7862a0f852cf428111}{GetAngle}}();}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_object_aa40b12e50a2ac5e6680e5762ee90c9fc}{GetSpeed}}();}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_object_ad35c8c981954a69143edb0fa25ec4693}{x}}\ =\ 128;}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_object_a23e00e3eff70fc63a5230aad2c19c740}{y}}\ =\ 128;}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_object_a886112c395ce593768f0bcaca318dfa6}{w}}\ =\ 0;}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_object_ac4e6e4da528bb5694d012528ea0df51e}{h}}\ =\ 0;}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_object_ac7ea0b9874b8ee9f1dbfbb5d95393338}{angle}}\ =\ 0.0;}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_object_a9d46954587b6cb73615361b674b27b23}{speed}}\ =\ 0.0;}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00135\ \ \ \ \ std::unordered\_map<std::string,\ Component\ *>\ m\_components\_dict\{\};}
+\DoxyCodeLine{00136\ \};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

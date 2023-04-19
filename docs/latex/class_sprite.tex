@@ -1,0 +1,226 @@
+\hypertarget{class_sprite}{}\doxysection{Sprite Class Reference}
+\label{class_sprite}\index{Sprite@{Sprite}}
+
+
+{\ttfamily \#include $<$Sprite.\+hpp$>$}
+
+
+
+Inheritance diagram for Sprite\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{class_sprite__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Sprite\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{class_sprite__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sprite_a12cba3ac1868418add3c4d95ce87e615}{Sprite}} ()
+\item 
+\mbox{\hyperlink{class_sprite_a39a5c238bb32144cc334c3619f532082}{Sprite}} (SDL\+\_\+\+Renderer $\ast$renderer, int frameX, int frameY, int frame\+Width, int frame\+Height, int dest\+Width, int dest\+Height, std\+::string image\+\_\+filename, int offsetX, int offsetY)
+\item 
+void \mbox{\hyperlink{class_sprite_a5dc1419e8029fc9d972c88a5ba086a63}{Push\+Frame}} (int frameX, int frameY, int frame\+Width, int frame\+Height)
+\item 
+void \mbox{\hyperlink{class_sprite_a7066655e0c4fd3ef38009bf377b4594a}{Pop\+Frame}} ()
+\item 
+void \mbox{\hyperlink{class_sprite_a275e83f0099fc068419caca88b8d5573}{Update}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \&g) override
+\item 
+void \mbox{\hyperlink{class_sprite_ac4e668473c3d1d0bbee50c032cd7505a}{Render}} (SDL\+\_\+\+Renderer $\ast$ren) override
+\item 
+bool \mbox{\hyperlink{class_sprite_a3e7af9758cad848f0b854a018cbdd8e3}{Get\+Render\+Flag}} () override
+\item 
+void \mbox{\hyperlink{class_sprite_a9649ac123dc68d3f52b0a4d839955428}{Set\+Render\+Flag}} (bool b) override
+\item 
+int \mbox{\hyperlink{class_sprite_af21db8ee8b4adae760d962c5889015b1}{Test\+Sprite}} ()
+\item 
+int \mbox{\hyperlink{class_sprite_aed5a1ba380ecd7c7f36b081e52f7cc13}{Test}} ()
+\item 
+int \mbox{\hyperlink{class_sprite_a43e1f3a94a5b0a94b9ecae35f7f875d8}{Destroy}} ()
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_component_aa3ba7bbb8bfdc836ee3c6536b8d04d22}{Update}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \&g)=0
+\item 
+virtual void \mbox{\hyperlink{class_component_a78c8f31f3d9a8af5bc02275cb677cf4b}{Render}} (SDL\+\_\+\+Renderer $\ast$ren)=0
+\item 
+virtual bool \mbox{\hyperlink{class_component_a02aac3ddd23b7a94630bcc753866db96}{Get\+Render\+Flag}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_component_a0e9c274cd658e024ca01826b68252097}{Set\+Render\+Flag}} (bool b)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_sprite_a95661d9504e0087f97ead1035e0551de}{test}} = 5
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_component}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_component_addafed0919900a4b5c7fe7900a544390}{render\+Flag}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_sprite}{Sprite}} component that extends the abstract component class This is used to attach images to gameobjects 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sprite_a12cba3ac1868418add3c4d95ce87e615}\label{class_sprite_a12cba3ac1868418add3c4d95ce87e615}} 
+\index{Sprite@{Sprite}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{Sprite()}{Sprite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sprite\+::\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_sprite_a39a5c238bb32144cc334c3619f532082}\label{class_sprite_a39a5c238bb32144cc334c3619f532082}} 
+\index{Sprite@{Sprite}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{Sprite()}{Sprite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sprite\+::\+Sprite (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{int}]{frameX,  }\item[{int}]{frameY,  }\item[{int}]{frame\+Width,  }\item[{int}]{frame\+Height,  }\item[{int}]{dest\+Width,  }\item[{int}]{dest\+Height,  }\item[{std\+::string}]{image\+\_\+filename,  }\item[{int}]{offsetX,  }\item[{int}]{offsetY }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{class_sprite_a39a5c238bb32144cc334c3619f532082_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sprite_a43e1f3a94a5b0a94b9ecae35f7f875d8}\label{class_sprite_a43e1f3a94a5b0a94b9ecae35f7f875d8}} 
+\index{Sprite@{Sprite}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily int Sprite\+::\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_sprite_a3e7af9758cad848f0b854a018cbdd8e3}\label{class_sprite_a3e7af9758cad848f0b854a018cbdd8e3}} 
+\index{Sprite@{Sprite}!GetRenderFlag@{GetRenderFlag}}
+\index{GetRenderFlag@{GetRenderFlag}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{GetRenderFlag()}{GetRenderFlag()}}
+{\footnotesize\ttfamily bool Sprite\+::\+Get\+Render\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns if component is being rendered 
+
+Implements \mbox{\hyperlink{class_component_a02aac3ddd23b7a94630bcc753866db96}{Component}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{class_sprite_a3e7af9758cad848f0b854a018cbdd8e3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_sprite_a7066655e0c4fd3ef38009bf377b4594a}\label{class_sprite_a7066655e0c4fd3ef38009bf377b4594a}} 
+\index{Sprite@{Sprite}!PopFrame@{PopFrame}}
+\index{PopFrame@{PopFrame}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{PopFrame()}{PopFrame()}}
+{\footnotesize\ttfamily void Sprite\+::\+Pop\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{class_sprite_a7066655e0c4fd3ef38009bf377b4594a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_sprite_a5dc1419e8029fc9d972c88a5ba086a63}\label{class_sprite_a5dc1419e8029fc9d972c88a5ba086a63}} 
+\index{Sprite@{Sprite}!PushFrame@{PushFrame}}
+\index{PushFrame@{PushFrame}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{PushFrame()}{PushFrame()}}
+{\footnotesize\ttfamily void Sprite\+::\+Push\+Frame (\begin{DoxyParamCaption}\item[{int}]{frameX,  }\item[{int}]{frameY,  }\item[{int}]{frame\+Width,  }\item[{int}]{frame\+Height }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{class_sprite_a5dc1419e8029fc9d972c88a5ba086a63_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_sprite_ac4e668473c3d1d0bbee50c032cd7505a}\label{class_sprite_ac4e668473c3d1d0bbee50c032cd7505a}} 
+\index{Sprite@{Sprite}!Render@{Render}}
+\index{Render@{Render}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Sprite\+::\+Render (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{ren }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Render function to run each loop 
+
+Implements \mbox{\hyperlink{class_component_a78c8f31f3d9a8af5bc02275cb677cf4b}{Component}}.
+
+\mbox{\Hypertarget{class_sprite_a9649ac123dc68d3f52b0a4d839955428}\label{class_sprite_a9649ac123dc68d3f52b0a4d839955428}} 
+\index{Sprite@{Sprite}!SetRenderFlag@{SetRenderFlag}}
+\index{SetRenderFlag@{SetRenderFlag}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{SetRenderFlag()}{SetRenderFlag()}}
+{\footnotesize\ttfamily void Sprite\+::\+Set\+Render\+Flag (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+To enable/disable rendering 
+
+Implements \mbox{\hyperlink{class_component_a0e9c274cd658e024ca01826b68252097}{Component}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{class_sprite_a9649ac123dc68d3f52b0a4d839955428_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_sprite_aed5a1ba380ecd7c7f36b081e52f7cc13}\label{class_sprite_aed5a1ba380ecd7c7f36b081e52f7cc13}} 
+\index{Sprite@{Sprite}!Test@{Test}}
+\index{Test@{Test}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{Test()}{Test()}}
+{\footnotesize\ttfamily int Sprite\+::\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_sprite_af21db8ee8b4adae760d962c5889015b1}\label{class_sprite_af21db8ee8b4adae760d962c5889015b1}} 
+\index{Sprite@{Sprite}!TestSprite@{TestSprite}}
+\index{TestSprite@{TestSprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{TestSprite()}{TestSprite()}}
+{\footnotesize\ttfamily int Sprite\+::\+Test\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_sprite_af21db8ee8b4adae760d962c5889015b1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_sprite_a275e83f0099fc068419caca88b8d5573}\label{class_sprite_a275e83f0099fc068419caca88b8d5573}} 
+\index{Sprite@{Sprite}!Update@{Update}}
+\index{Update@{Update}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Sprite\+::\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \&}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update function to run each loop 
+
+Implements \mbox{\hyperlink{class_component_aa3ba7bbb8bfdc836ee3c6536b8d04d22}{Component}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sprite_a95661d9504e0087f97ead1035e0551de}\label{class_sprite_a95661d9504e0087f97ead1035e0551de}} 
+\index{Sprite@{Sprite}!test@{test}}
+\index{test@{test}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{test}{test}}
+{\footnotesize\ttfamily int Sprite\+::test = 5}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_sprite_8hpp}{Sprite.\+hpp}}\item 
+\mbox{\hyperlink{_sprite_8cpp}{Sprite.\+cpp}}\end{DoxyCompactItemize}

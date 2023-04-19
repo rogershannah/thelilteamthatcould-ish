@@ -33,6 +33,9 @@ nav ul {
   list-style-type: none;
   padding: 0;
   width: 100%;
+}
+
+.center {  
   display: flex;
   justify-content: space-evenly;
 }
@@ -41,11 +44,16 @@ li {
   display: inline;
 }
 
-article {
+div {
   float: left;
   padding: 20px;
   width: 100%;
   background-color: #fefefe;
+}
+
+img {
+  width:33%;
+  padding: 15px
 }
 
 /* Clear floats after the columns */
@@ -53,6 +61,16 @@ section::after {
   content: "";
   display: table;
   clear: both;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
 }
 
 /* Style the footer */
@@ -65,7 +83,7 @@ footer {
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
-  nav, article {
+  nav, div {
     width: 100%;
     height: auto;
   }
@@ -78,48 +96,67 @@ footer {
   <h2>Space Engine</h2>
 </header>
 
-<section>
+<container>
   <nav>
-    <ul>
+    <ul >
       <li><a href="#trailer">Trailer</a></li>
       <li><a href="#documentation">Documentation</a></li>
       <li><a href="#architecture">Architecture</a></li>
       <li><a href="#binary">Binary</a></li>
       <li><a href="#postmortem">Post Mortem</a></li>
+      <li><a href="https://github.com/Spring23BuildingGameEngines/finalproject-boston-portland-group/tree/master/Engine">Our Engine (source code)</a></li>
     </ul>
   </nav>
   
-  <article>
+  <div > 
     <h1 id="trailer">Trailer</h1>
-    <p>Provide a 1 minute video trailer followed by at least 3 screenshots of your game (order matters, video first, then screenshots below)</p>
-  </article>
+    <video width="1200" height="800" controls >
+      <source src="./assets/trailer.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div > 
+    <h1>Screenshots</h1>
+    <img src="./assets/start_menu.png" alt="start_menu">
+    <img src="./assets/gamplay.png" alt="Game play">
+    <img src="./assets/gui_tab1.png" alt="Gui tab 1">
+    <img src="./assets/gui_tab2.png" alt="Gui tab 2">
+    <img src="./assets/gui_tab3.png" alt="Gui tab 3">
+    <img src="./assets/gui_tab4.png" alt="Gui tab 4">
+  </div>
 
-  <article>
+  <div>
     <h1 id="documentation">Documentation</h1>
-    <p>(i.e. a link to your doxygen generated files)</p>
-  </article>
+    <p><a href="./docs/html/index.html">Doxygen Files</a></p>
+  </div>
 
-  <article>
+  <div>
     <h1 id="architecture">Architecture</h1>
-    <p>An image of your engine architecture.</p>
-  </article>
+    <img src="./assets/class_hierarchy.png" alt="class_hierarchy">
+  </div>
   
-  <article>
+  <div>
     <h1 id="binary">Binary</h1>
     <p>A link to your binary.</p>
-  </article>
+    <a href="https://github.com/Spring23BuildingGameEngines/finalproject-boston-portland-group/blob/master/Engine/build.py">run using 'python build.py', and then run the executable</a>
 
-  <article>
+    <p>build using <a href="https://github.com/Spring23BuildingGameEngines/finalproject-boston-portland-group/blob/master/Engine/macbuild.py">macbuild.py</a> or <a href="https://github.com/Spring23BuildingGameEngines/finalproject-boston-portland-group/blob/master/Engine/mingw64build.sh">mingw64build.sh</a>, depending on your system</p>
+    <p>Note: make sure your SDL_mixer and SDL_ttf libraries are up to date!</p>
+    <p>then run <a href="https://github.com/Spring23BuildingGameEngines/finalproject-boston-portland-group/blob/master/Engine/asteroids.py">python asteroids.py</a></p>
+    <p>for the GUI, run 'python SpaceEngineGUI.py'</p>
+  </div>
+
+  <div>
     <h1 id="postmortem">Post Mortem</h1> <p>We believe we did a good job on creating a separation of responsibilities within the game engine itself, such as having components for major object functions. However, in the future we could create a transform component for the gameobjects position and velocity. We had trouble doing this as the gameobjects transform attributes were used by so many other components.</p>
-    <p>Another improvement we could make is on general graphics and feedback. We used 2d bitmaps for our demo that could be customized in the GUI. A good improvement would be to use 3d graphics in a 2D plane, or add particle effects on collisions. For audio, we could add customizable audio for events in the game.</p>
+    <p>Another improvement we could make is on general graphics and feedback. We used 2d bitmaps for our demo that could be customized in the GUI. A good improvement would be to use 3d graphics in a 2D plane, or add pdiv effects on collisions. For audio, we could add customizable audio for events in the game.</p>
     <p> If given another month on this project, our team had many plans that we wish we could have implemented but had to scale back due to unexpected obstacles. For example, we had started building out a 3D graphics engine with a custom renderer to create a 2.5D game. With more time, (and Hannah concussion-free) we believe that this could have been implemented. Additionally, we had plans for the 3D space background to be customizable via our GUI. Expanding the GUI capabilities overall would be another thing our team would love to expand on our project. Even given a few more days, we would have loved making the game more custoizable.</p>
    
-  </article>
+  </div>
 
-</section>
+</container>
 
 <footer>
-  <p>CS5850 Building Game Engines -- boston-portland-group -- Spring 2023</p>
+  <p>CS5850 Building Game Engines -- boston-portland-group aka The Little Team That Could-ish -- Spring 2023</p>
 </footer>
 
 </body>

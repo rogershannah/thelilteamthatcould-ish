@@ -1,0 +1,5 @@
+<map id="GameObject::CheckCollision" name="GameObject::CheckCollision">
+<area shape="rect" id="node1" title=" " alt="" coords="5,42,195,67"/>
+<area shape="rect" id="node2" href="$class_collision_component.html#a539677ccf62b6efd8a551ceeca4a7c12" title=" " alt="" coords="269,5,407,45"/>
+<area shape="rect" id="node3" href="$class_game_object.html#ab69360fd3fbb72c6e8b09b595e25e05e" title=" " alt="" coords="243,70,433,95"/>
+</map>

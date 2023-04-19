@@ -1,0 +1,89 @@
+\hypertarget{_audio_8hpp_source}{}\doxysection{Audio.\+hpp}
+\mbox{\hyperlink{_audio_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ AUDIO\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ AUDIO\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#if\ defined(LINUX)\ ||\ defined(MINGW)}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <SDL2/SDL\_mixer.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#else\ }\textcolor{comment}{//\ This\ works\ for\ Mac}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <SDL\_mixer.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_resource_manager_8hpp}{ResourceManager.hpp}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_play_sound}{PlaySound}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_play_sound_a8685e9f102c2d896d8e02b101a90fbcf}{name}};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_play_sound_a40eaa5e4dc234bcf8cb2a7ed4524b9e0}{channel}};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_play_sound_ab1f8295c9f7ba2d2e23416caa9ea80ed}{volume}};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_play_sound_ad868bc2c53240bd6180edc2a522bf50b}{prority}};}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_audio}{Audio}}}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_audio}{Audio}}\ *\mbox{\hyperlink{class_audio_aeb1b56c49ca5b714d7f6a5ad6b5859a9}{instance\_}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_audio}{Audio}}\ \&\mbox{\hyperlink{class_audio_a9c32cc71e3c3b2e3f4f1198e07377231}{GetInstance}}()}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_audio_aeb1b56c49ca5b714d7f6a5ad6b5859a9}{instance\_}}\ ==\ NULL)}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ head\_\ =\ 0;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ tail\_\ =\ 0;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_audio_aeb1b56c49ca5b714d7f6a5ad6b5859a9}{instance\_}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_audio}{Audio}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{class_audio_aeb1b56c49ca5b714d7f6a5ad6b5859a9}{instance\_}};}
+\DoxyCodeLine{00041\ \ \ \ \ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_audio_a1e3a60a274ac7622225ef7c00f9735b4}{Update}}()}
+\DoxyCodeLine{00044\ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ numPending\_;\ i++)}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (head\_\ ==\ tail\_)}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_audio_a2faca081724e50ed7a9b2ae44ebe24fa}{startSound}}(pending\_[head\_]);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ head\_\ =\ (head\_\ +\ 1)\ \%\ MAX\_PENDING;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ numPending\_\ =\ 0;}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_audio_a35ae3a0b1ef7baa66eedec623de7f0d7}{playSound}}(\mbox{\hyperlink{struct_play_sound}{PlaySound}}\ inSound)}
+\DoxyCodeLine{00057\ \ \ \ \ \{}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ assert((tail\_\ +\ 1)\ \%\ MAX\_PENDING\ !=\ head\_);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ pending\_[tail\_].\mbox{\hyperlink{struct_play_sound_a8685e9f102c2d896d8e02b101a90fbcf}{name}}\ =\ inSound.\mbox{\hyperlink{struct_play_sound_a8685e9f102c2d896d8e02b101a90fbcf}{name}};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ pending\_[tail\_].\mbox{\hyperlink{struct_play_sound_a40eaa5e4dc234bcf8cb2a7ed4524b9e0}{channel}}\ =\ inSound.\mbox{\hyperlink{struct_play_sound_a40eaa5e4dc234bcf8cb2a7ed4524b9e0}{channel}};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ pending\_[tail\_].\mbox{\hyperlink{struct_play_sound_ab1f8295c9f7ba2d2e23416caa9ea80ed}{volume}}\ =\ inSound.\mbox{\hyperlink{struct_play_sound_ab1f8295c9f7ba2d2e23416caa9ea80ed}{volume}};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ tail\_\ =\ (tail\_\ +\ 1)\ \%\ MAX\_PENDING;}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_audio_a2faca081724e50ed7a9b2ae44ebe24fa}{startSound}}(\mbox{\hyperlink{struct_play_sound}{PlaySound}}\ inSound)}
+\DoxyCodeLine{00068\ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \&resourceManager\ =\ \mbox{\hyperlink{class_resource_manager_acb3f8ecc7b3de8c1c7ac956ce5114d47}{ResourceManager::GetInstance}}();}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ Mix\_Chunk\ *sound\ =\ resourceManager.GetSound(inSound.\mbox{\hyperlink{struct_play_sound_a8685e9f102c2d896d8e02b101a90fbcf}{name}});}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ Mix\_PlayChannel(inSound.\mbox{\hyperlink{struct_play_sound_a40eaa5e4dc234bcf8cb2a7ed4524b9e0}{channel}},\ sound,\ inSound.\mbox{\hyperlink{struct_play_sound_ab1f8295c9f7ba2d2e23416caa9ea80ed}{volume}});}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ MAX\_PENDING\ =\ 16;}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ head\_;}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ tail\_;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{struct_play_sound}{PlaySound}}\ pending\_[MAX\_PENDING];}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ numPending\_;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{class_audio}{Audio}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{class_audio}{Audio}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_audio}{Audio}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{class_audio}{Audio}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_audio}{Audio}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00085\ \};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

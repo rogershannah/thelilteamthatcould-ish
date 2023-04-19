@@ -1,0 +1,86 @@
+\hypertarget{_input_controller_8hpp_source}{}\doxysection{Input\+Controller.\+hpp}
+\mbox{\hyperlink{_input_controller_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ INPUTCONTROLLER\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ INPUTCONTROLLER\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#if\ defined(LINUX)\ ||\ defined(MINGW)}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#else\ }\textcolor{comment}{//\ This\ works\ for\ Mac}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_game_object_8hpp}{GameObject.hpp}}>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_input_controller}{InputController}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_component}{Component}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_input_controller_aba927fffeb0bf4c4fd0835d4dfbdfaec}{InputController}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_input_controller_aba927fffeb0bf4c4fd0835d4dfbdfaec}{InputController}}(std::string\ left,\ std::string\ right,\ std::string\ up,\ std::string\ down,\ std::string\ action1,\ std::string\ action2,\ \textcolor{keywordtype}{int}\ screenWidth,\ \textcolor{keywordtype}{int}\ screenHeight);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_input_controller_aa36b76b8144da60b26cd9b8298aa5627}{\string~InputController}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ Update\ the\ Sprite}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_controller_a901f6461aa7e769a3c2d7eb0b4afd695}{Update}}(\mbox{\hyperlink{class_game_object}{GameObject}}\ \&g)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ Draw\ the\ Sprite}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_controller_aafe4af5ec84156489e06e590382ff4b2}{Render}}(SDL\_Renderer\ *ren)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ check\ if\ directional\ keys\ are\ pressed}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_controller_a712b8d61176550252f3887c6f9d9257c}{IsUpKeyPressed}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_controller_a653d63c1396b7f998e751f2a4eeaa6e1}{IsDownKeyPressed}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_controller_abd181b7592a742079dac6bb6f1684504}{IsLeftKeyPressed}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_controller_ac793e8d0549afe228343706e58fb48dd}{IsRightKeyPressed}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_controller_a45e881401491591703fcdcee20728b33}{IsAction1KeyPressed}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_controller_a9c5f5c4d8aee9aa2f143302368cc7548}{IsAction2KeyPressed}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_controller_a1a48458c1a234c3d9f14209dc9c18c03}{IsStartKeyPressed}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_controller_a3f352241defe60e234e4c75d0d59d7c1}{GetRenderFlag}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_controller_a04c35fd8d6289541bcf42ff192fba0cf}{SetRenderFlag}}(\textcolor{keywordtype}{bool}\ b)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ 'equivalent'\ to\ our\ destructor}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_input_controller_a3afb0ef9c1ec8317becaff87e6a1ec7d}{Destroy}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ renderFlag\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{const}\ Uint8\ *keys;}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ screenHeight;}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ screenWidth;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ screenBuffer;\ \textcolor{comment}{//\ So\ it\ doesnt\ go\ offscreen\ on\ right\ and\ bottom}}
+\DoxyCodeLine{00050\ \ \ \ \ SDL\_Scancode\ left;}
+\DoxyCodeLine{00051\ \ \ \ \ SDL\_Scancode\ right;}
+\DoxyCodeLine{00052\ \ \ \ \ SDL\_Scancode\ up;}
+\DoxyCodeLine{00053\ \ \ \ \ SDL\_Scancode\ down;}
+\DoxyCodeLine{00054\ \ \ \ \ SDL\_Scancode\ action1;}
+\DoxyCodeLine{00055\ \ \ \ \ SDL\_Scancode\ action2;}
+\DoxyCodeLine{00056\ \ \ \ \ std::map<std::string,\ SDL\_Scancode>\ inputKeys\ =\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}a"{}},\ SDL\_SCANCODE\_A\},}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}b"{}},\ SDL\_SCANCODE\_B\},}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}c"{}},\ SDL\_SCANCODE\_C\},}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}d"{}},\ SDL\_SCANCODE\_D\},}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}e"{}},\ SDL\_SCANCODE\_E\},}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}f"{}},\ SDL\_SCANCODE\_F\},}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}g"{}},\ SDL\_SCANCODE\_G\},}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}h"{}},\ SDL\_SCANCODE\_H\},}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}i"{}},\ SDL\_SCANCODE\_I\},}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}j"{}},\ SDL\_SCANCODE\_J\},}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}k"{}},\ SDL\_SCANCODE\_K\},}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}l"{}},\ SDL\_SCANCODE\_L\},}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}m"{}},\ SDL\_SCANCODE\_M\},}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}n"{}},\ SDL\_SCANCODE\_N\},}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}o"{}},\ SDL\_SCANCODE\_O\},}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}p"{}},\ SDL\_SCANCODE\_P\},}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}q"{}},\ SDL\_SCANCODE\_Q\},}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}r"{}},\ SDL\_SCANCODE\_R\},}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}s"{}},\ SDL\_SCANCODE\_S\},}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}t"{}},\ SDL\_SCANCODE\_T\},}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}u"{}},\ SDL\_SCANCODE\_U\},}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}v"{}},\ SDL\_SCANCODE\_V\},}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}w"{}},\ SDL\_SCANCODE\_W\},}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}x"{}},\ SDL\_SCANCODE\_X\},}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}y"{}},\ SDL\_SCANCODE\_Y\},}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}z"{}},\ SDL\_SCANCODE\_Z\},}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}space"{}},\ SDL\_SCANCODE\_SPACE\}\};}
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

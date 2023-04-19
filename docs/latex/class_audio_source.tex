@@ -1,0 +1,188 @@
+\hypertarget{class_audio_source}{}\doxysection{Audio\+Source Class Reference}
+\label{class_audio_source}\index{AudioSource@{AudioSource}}
+
+
+{\ttfamily \#include $<$Audio\+Source.\+hpp$>$}
+
+
+
+Inheritance diagram for Audio\+Source\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{class_audio_source__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Audio\+Source\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{class_audio_source__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_audio_source_ac92e2b875c417be37569e03104a7cba5}{Audio\+Source}} (std\+::string name, int channel, int volume, int priority)
+\item 
+\mbox{\hyperlink{class_audio_source_a4d4b2be34ec676bf01d1ca1784f79a07}{$\sim$\+Audio\+Source}} ()
+\item 
+void \mbox{\hyperlink{class_audio_source_a5fff387d96cc629189bf714ee4871719}{Update}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \&g) override
+\item 
+void \mbox{\hyperlink{class_audio_source_acd440d181424cf12e323e894c976eb88}{Render}} (SDL\+\_\+\+Renderer $\ast$ren) override
+\item 
+bool \mbox{\hyperlink{class_audio_source_a210ec1841fb83dc1df1d38f4bdb16515}{Get\+Render\+Flag}} () override
+\item 
+void \mbox{\hyperlink{class_audio_source_a1aa3aadb526e0c69e672513a5f1e860d}{Set\+Render\+Flag}} (bool b) override
+\item 
+void \mbox{\hyperlink{class_audio_source_a27506b9e7f9cc45daf7b094484456d81}{Play}} ()
+\item 
+void \mbox{\hyperlink{class_audio_source_afcfa9a28255f0aac30aa218d4e293123}{Stop}} ()
+\item 
+int \mbox{\hyperlink{class_audio_source_a2a7ab3f33cdde30ebe35fddc9104169f}{Destroy}} ()
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_component_aa3ba7bbb8bfdc836ee3c6536b8d04d22}{Update}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \&g)=0
+\item 
+virtual void \mbox{\hyperlink{class_component_a78c8f31f3d9a8af5bc02275cb677cf4b}{Render}} (SDL\+\_\+\+Renderer $\ast$ren)=0
+\item 
+virtual bool \mbox{\hyperlink{class_component_a02aac3ddd23b7a94630bcc753866db96}{Get\+Render\+Flag}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_component_a0e9c274cd658e024ca01826b68252097}{Set\+Render\+Flag}} (bool b)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_component}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_component_addafed0919900a4b5c7fe7900a544390}{render\+Flag}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_audio}{Audio}} component that extends the abstract component class This is used to store and play sounds when attached to an object 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_audio_source_ac92e2b875c417be37569e03104a7cba5}\label{class_audio_source_ac92e2b875c417be37569e03104a7cba5}} 
+\index{AudioSource@{AudioSource}!AudioSource@{AudioSource}}
+\index{AudioSource@{AudioSource}!AudioSource@{AudioSource}}
+\doxysubsubsection{\texorpdfstring{AudioSource()}{AudioSource()}}
+{\footnotesize\ttfamily Audio\+Source\+::\+Audio\+Source (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{int}]{channel,  }\item[{int}]{volume,  }\item[{int}]{priority }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_source_ac92e2b875c417be37569e03104a7cba5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_audio_source_a4d4b2be34ec676bf01d1ca1784f79a07}\label{class_audio_source_a4d4b2be34ec676bf01d1ca1784f79a07}} 
+\index{AudioSource@{AudioSource}!````~AudioSource@{$\sim$AudioSource}}
+\index{````~AudioSource@{$\sim$AudioSource}!AudioSource@{AudioSource}}
+\doxysubsubsection{\texorpdfstring{$\sim$AudioSource()}{~AudioSource()}}
+{\footnotesize\ttfamily Audio\+Source\+::$\sim$\+Audio\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_audio_source_a2a7ab3f33cdde30ebe35fddc9104169f}\label{class_audio_source_a2a7ab3f33cdde30ebe35fddc9104169f}} 
+\index{AudioSource@{AudioSource}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!AudioSource@{AudioSource}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily int Audio\+Source\+::\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_audio_source_a210ec1841fb83dc1df1d38f4bdb16515}\label{class_audio_source_a210ec1841fb83dc1df1d38f4bdb16515}} 
+\index{AudioSource@{AudioSource}!GetRenderFlag@{GetRenderFlag}}
+\index{GetRenderFlag@{GetRenderFlag}!AudioSource@{AudioSource}}
+\doxysubsubsection{\texorpdfstring{GetRenderFlag()}{GetRenderFlag()}}
+{\footnotesize\ttfamily bool Audio\+Source\+::\+Get\+Render\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns if component is being rendered 
+
+Implements \mbox{\hyperlink{class_component_a02aac3ddd23b7a94630bcc753866db96}{Component}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_source_a210ec1841fb83dc1df1d38f4bdb16515_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_audio_source_a27506b9e7f9cc45daf7b094484456d81}\label{class_audio_source_a27506b9e7f9cc45daf7b094484456d81}} 
+\index{AudioSource@{AudioSource}!Play@{Play}}
+\index{Play@{Play}!AudioSource@{AudioSource}}
+\doxysubsubsection{\texorpdfstring{Play()}{Play()}}
+{\footnotesize\ttfamily void Audio\+Source\+::\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{class_audio_source_a27506b9e7f9cc45daf7b094484456d81_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_audio_source_acd440d181424cf12e323e894c976eb88}\label{class_audio_source_acd440d181424cf12e323e894c976eb88}} 
+\index{AudioSource@{AudioSource}!Render@{Render}}
+\index{Render@{Render}!AudioSource@{AudioSource}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Audio\+Source\+::\+Render (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{ren }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Render function to run each loop 
+
+Implements \mbox{\hyperlink{class_component_a78c8f31f3d9a8af5bc02275cb677cf4b}{Component}}.
+
+\mbox{\Hypertarget{class_audio_source_a1aa3aadb526e0c69e672513a5f1e860d}\label{class_audio_source_a1aa3aadb526e0c69e672513a5f1e860d}} 
+\index{AudioSource@{AudioSource}!SetRenderFlag@{SetRenderFlag}}
+\index{SetRenderFlag@{SetRenderFlag}!AudioSource@{AudioSource}}
+\doxysubsubsection{\texorpdfstring{SetRenderFlag()}{SetRenderFlag()}}
+{\footnotesize\ttfamily void Audio\+Source\+::\+Set\+Render\+Flag (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+To enable/disable rendering 
+
+Implements \mbox{\hyperlink{class_component_a0e9c274cd658e024ca01826b68252097}{Component}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_source_a1aa3aadb526e0c69e672513a5f1e860d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_audio_source_afcfa9a28255f0aac30aa218d4e293123}\label{class_audio_source_afcfa9a28255f0aac30aa218d4e293123}} 
+\index{AudioSource@{AudioSource}!Stop@{Stop}}
+\index{Stop@{Stop}!AudioSource@{AudioSource}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily void Audio\+Source\+::\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{class_audio_source_afcfa9a28255f0aac30aa218d4e293123_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_audio_source_a5fff387d96cc629189bf714ee4871719}\label{class_audio_source_a5fff387d96cc629189bf714ee4871719}} 
+\index{AudioSource@{AudioSource}!Update@{Update}}
+\index{Update@{Update}!AudioSource@{AudioSource}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Audio\+Source\+::\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \&}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update function to run each loop 
+
+Implements \mbox{\hyperlink{class_component_aa3ba7bbb8bfdc836ee3c6536b8d04d22}{Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_audio_source_8hpp}{Audio\+Source.\+hpp}}\item 
+\mbox{\hyperlink{_audio_source_8cpp}{Audio\+Source.\+cpp}}\end{DoxyCompactItemize}

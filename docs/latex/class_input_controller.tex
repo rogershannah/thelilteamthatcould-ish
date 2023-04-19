@@ -1,0 +1,268 @@
+\hypertarget{class_input_controller}{}\doxysection{Input\+Controller Class Reference}
+\label{class_input_controller}\index{InputController@{InputController}}
+
+
+{\ttfamily \#include $<$Input\+Controller.\+hpp$>$}
+
+
+
+Inheritance diagram for Input\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{class_input_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Input\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{class_input_controller__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_input_controller_aba927fffeb0bf4c4fd0835d4dfbdfaec}{Input\+Controller}} ()
+\item 
+\mbox{\hyperlink{class_input_controller_a4b162fdce9470d0a2d4faa7eef142b6a}{Input\+Controller}} (std\+::string left, std\+::string right, std\+::string up, std\+::string down, std\+::string action1, std\+::string action2, int screen\+Width, int screen\+Height)
+\item 
+\mbox{\hyperlink{class_input_controller_aa36b76b8144da60b26cd9b8298aa5627}{$\sim$\+Input\+Controller}} ()
+\item 
+void \mbox{\hyperlink{class_input_controller_a901f6461aa7e769a3c2d7eb0b4afd695}{Update}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \&g) override
+\item 
+void \mbox{\hyperlink{class_input_controller_aafe4af5ec84156489e06e590382ff4b2}{Render}} (SDL\+\_\+\+Renderer $\ast$ren) override
+\item 
+bool \mbox{\hyperlink{class_input_controller_a712b8d61176550252f3887c6f9d9257c}{Is\+Up\+Key\+Pressed}} ()
+\item 
+bool \mbox{\hyperlink{class_input_controller_a653d63c1396b7f998e751f2a4eeaa6e1}{Is\+Down\+Key\+Pressed}} ()
+\item 
+bool \mbox{\hyperlink{class_input_controller_abd181b7592a742079dac6bb6f1684504}{Is\+Left\+Key\+Pressed}} ()
+\item 
+bool \mbox{\hyperlink{class_input_controller_ac793e8d0549afe228343706e58fb48dd}{Is\+Right\+Key\+Pressed}} ()
+\item 
+bool \mbox{\hyperlink{class_input_controller_a45e881401491591703fcdcee20728b33}{Is\+Action1\+Key\+Pressed}} ()
+\item 
+bool \mbox{\hyperlink{class_input_controller_a9c5f5c4d8aee9aa2f143302368cc7548}{Is\+Action2\+Key\+Pressed}} ()
+\item 
+bool \mbox{\hyperlink{class_input_controller_a1a48458c1a234c3d9f14209dc9c18c03}{Is\+Start\+Key\+Pressed}} ()
+\item 
+bool \mbox{\hyperlink{class_input_controller_a3f352241defe60e234e4c75d0d59d7c1}{Get\+Render\+Flag}} () override
+\item 
+void \mbox{\hyperlink{class_input_controller_a04c35fd8d6289541bcf42ff192fba0cf}{Set\+Render\+Flag}} (bool b) override
+\item 
+int \mbox{\hyperlink{class_input_controller_a3afb0ef9c1ec8317becaff87e6a1ec7d}{Destroy}} ()
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_component_aa3ba7bbb8bfdc836ee3c6536b8d04d22}{Update}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \&g)=0
+\item 
+virtual void \mbox{\hyperlink{class_component_a78c8f31f3d9a8af5bc02275cb677cf4b}{Render}} (SDL\+\_\+\+Renderer $\ast$ren)=0
+\item 
+virtual bool \mbox{\hyperlink{class_component_a02aac3ddd23b7a94630bcc753866db96}{Get\+Render\+Flag}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_component_a0e9c274cd658e024ca01826b68252097}{Set\+Render\+Flag}} (bool b)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_component}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_component_addafed0919900a4b5c7fe7900a544390}{render\+Flag}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Input controller component that extends the abstract component class This is used to allow the player to move the gameobject, given a control scheme 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_input_controller_aba927fffeb0bf4c4fd0835d4dfbdfaec}\label{class_input_controller_aba927fffeb0bf4c4fd0835d4dfbdfaec}} 
+\index{InputController@{InputController}!InputController@{InputController}}
+\index{InputController@{InputController}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{InputController()}{InputController()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Input\+Controller\+::\+Input\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_input_controller_a4b162fdce9470d0a2d4faa7eef142b6a}\label{class_input_controller_a4b162fdce9470d0a2d4faa7eef142b6a}} 
+\index{InputController@{InputController}!InputController@{InputController}}
+\index{InputController@{InputController}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{InputController()}{InputController()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Input\+Controller\+::\+Input\+Controller (\begin{DoxyParamCaption}\item[{std\+::string}]{left,  }\item[{std\+::string}]{right,  }\item[{std\+::string}]{up,  }\item[{std\+::string}]{down,  }\item[{std\+::string}]{action1,  }\item[{std\+::string}]{action2,  }\item[{int}]{screen\+Width,  }\item[{int}]{screen\+Height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_input_controller_aa36b76b8144da60b26cd9b8298aa5627}\label{class_input_controller_aa36b76b8144da60b26cd9b8298aa5627}} 
+\index{InputController@{InputController}!````~InputController@{$\sim$InputController}}
+\index{````~InputController@{$\sim$InputController}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{$\sim$InputController()}{~InputController()}}
+{\footnotesize\ttfamily Input\+Controller\+::$\sim$\+Input\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_input_controller_a3afb0ef9c1ec8317becaff87e6a1ec7d}\label{class_input_controller_a3afb0ef9c1ec8317becaff87e6a1ec7d}} 
+\index{InputController@{InputController}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily int Input\+Controller\+::\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_input_controller_a3f352241defe60e234e4c75d0d59d7c1}\label{class_input_controller_a3f352241defe60e234e4c75d0d59d7c1}} 
+\index{InputController@{InputController}!GetRenderFlag@{GetRenderFlag}}
+\index{GetRenderFlag@{GetRenderFlag}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{GetRenderFlag()}{GetRenderFlag()}}
+{\footnotesize\ttfamily bool Input\+Controller\+::\+Get\+Render\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns if component is being rendered 
+
+Implements \mbox{\hyperlink{class_component_a02aac3ddd23b7a94630bcc753866db96}{Component}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_input_controller_a3f352241defe60e234e4c75d0d59d7c1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_input_controller_a45e881401491591703fcdcee20728b33}\label{class_input_controller_a45e881401491591703fcdcee20728b33}} 
+\index{InputController@{InputController}!IsAction1KeyPressed@{IsAction1KeyPressed}}
+\index{IsAction1KeyPressed@{IsAction1KeyPressed}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{IsAction1KeyPressed()}{IsAction1KeyPressed()}}
+{\footnotesize\ttfamily bool Input\+Controller\+::\+Is\+Action1\+Key\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_input_controller_a45e881401491591703fcdcee20728b33_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_input_controller_a9c5f5c4d8aee9aa2f143302368cc7548}\label{class_input_controller_a9c5f5c4d8aee9aa2f143302368cc7548}} 
+\index{InputController@{InputController}!IsAction2KeyPressed@{IsAction2KeyPressed}}
+\index{IsAction2KeyPressed@{IsAction2KeyPressed}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{IsAction2KeyPressed()}{IsAction2KeyPressed()}}
+{\footnotesize\ttfamily bool Input\+Controller\+::\+Is\+Action2\+Key\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_input_controller_a9c5f5c4d8aee9aa2f143302368cc7548_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_input_controller_a653d63c1396b7f998e751f2a4eeaa6e1}\label{class_input_controller_a653d63c1396b7f998e751f2a4eeaa6e1}} 
+\index{InputController@{InputController}!IsDownKeyPressed@{IsDownKeyPressed}}
+\index{IsDownKeyPressed@{IsDownKeyPressed}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{IsDownKeyPressed()}{IsDownKeyPressed()}}
+{\footnotesize\ttfamily bool Input\+Controller\+::\+Is\+Down\+Key\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_input_controller_a653d63c1396b7f998e751f2a4eeaa6e1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_input_controller_abd181b7592a742079dac6bb6f1684504}\label{class_input_controller_abd181b7592a742079dac6bb6f1684504}} 
+\index{InputController@{InputController}!IsLeftKeyPressed@{IsLeftKeyPressed}}
+\index{IsLeftKeyPressed@{IsLeftKeyPressed}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{IsLeftKeyPressed()}{IsLeftKeyPressed()}}
+{\footnotesize\ttfamily bool Input\+Controller\+::\+Is\+Left\+Key\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_input_controller_abd181b7592a742079dac6bb6f1684504_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_input_controller_ac793e8d0549afe228343706e58fb48dd}\label{class_input_controller_ac793e8d0549afe228343706e58fb48dd}} 
+\index{InputController@{InputController}!IsRightKeyPressed@{IsRightKeyPressed}}
+\index{IsRightKeyPressed@{IsRightKeyPressed}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{IsRightKeyPressed()}{IsRightKeyPressed()}}
+{\footnotesize\ttfamily bool Input\+Controller\+::\+Is\+Right\+Key\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{class_input_controller_ac793e8d0549afe228343706e58fb48dd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_input_controller_a1a48458c1a234c3d9f14209dc9c18c03}\label{class_input_controller_a1a48458c1a234c3d9f14209dc9c18c03}} 
+\index{InputController@{InputController}!IsStartKeyPressed@{IsStartKeyPressed}}
+\index{IsStartKeyPressed@{IsStartKeyPressed}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{IsStartKeyPressed()}{IsStartKeyPressed()}}
+{\footnotesize\ttfamily bool Input\+Controller\+::\+Is\+Start\+Key\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{class_input_controller_a1a48458c1a234c3d9f14209dc9c18c03_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_input_controller_a712b8d61176550252f3887c6f9d9257c}\label{class_input_controller_a712b8d61176550252f3887c6f9d9257c}} 
+\index{InputController@{InputController}!IsUpKeyPressed@{IsUpKeyPressed}}
+\index{IsUpKeyPressed@{IsUpKeyPressed}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{IsUpKeyPressed()}{IsUpKeyPressed()}}
+{\footnotesize\ttfamily bool Input\+Controller\+::\+Is\+Up\+Key\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_input_controller_a712b8d61176550252f3887c6f9d9257c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_input_controller_aafe4af5ec84156489e06e590382ff4b2}\label{class_input_controller_aafe4af5ec84156489e06e590382ff4b2}} 
+\index{InputController@{InputController}!Render@{Render}}
+\index{Render@{Render}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Input\+Controller\+::\+Render (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{ren }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Render function to run each loop 
+
+Implements \mbox{\hyperlink{class_component_a78c8f31f3d9a8af5bc02275cb677cf4b}{Component}}.
+
+\mbox{\Hypertarget{class_input_controller_a04c35fd8d6289541bcf42ff192fba0cf}\label{class_input_controller_a04c35fd8d6289541bcf42ff192fba0cf}} 
+\index{InputController@{InputController}!SetRenderFlag@{SetRenderFlag}}
+\index{SetRenderFlag@{SetRenderFlag}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{SetRenderFlag()}{SetRenderFlag()}}
+{\footnotesize\ttfamily void Input\+Controller\+::\+Set\+Render\+Flag (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+To enable/disable rendering 
+
+Implements \mbox{\hyperlink{class_component_a0e9c274cd658e024ca01826b68252097}{Component}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_input_controller_a04c35fd8d6289541bcf42ff192fba0cf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_input_controller_a901f6461aa7e769a3c2d7eb0b4afd695}\label{class_input_controller_a901f6461aa7e769a3c2d7eb0b4afd695}} 
+\index{InputController@{InputController}!Update@{Update}}
+\index{Update@{Update}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Input\+Controller\+::\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \&}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update function to run each loop 
+
+Implements \mbox{\hyperlink{class_component_aa3ba7bbb8bfdc836ee3c6536b8d04d22}{Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_input_controller_8hpp}{Input\+Controller.\+hpp}}\item 
+\mbox{\hyperlink{_input_controller_8cpp}{Input\+Controller.\+cpp}}\end{DoxyCompactItemize}
